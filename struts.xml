@@ -1,0 +1,49 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="CustomerLogin" class="actions.CustomerLoginAction">
+            <result name="success">/main.jsp</result>
+            <result name="input">/main.jsp</result>
+        </action>   
+        <action name="AccountCreate" class="actions.AccountCreateAction">
+            <result name="success">/main.jsp</result>
+            <result name="input">/createAccount.jsp</result>
+        </action>     
+        <action name="LoadDepartment" class="actions.LoadDepartmentAction">
+            <result name="success">/departmentPage.jsp</result>
+            <result name="input">/main.jsp</result>
+        </action>    
+        <action name="SearchMerchandise" class="actions.SearchMerchandiseAction">
+            <result name="success">/searchPage.jsp</result>
+            <result name="input">/main.jsp</result>
+        </action>  
+        <action name="ViewItem" class="actions.ViewItemAction">
+            <result name="success">/itemPage.jsp</result>
+            <result name="input">/main.jsp</result>
+        </action>
+        <action name="AddToCart" class="actions.AddToCartAction">
+            <result name="success">/myCart.jsp</result>
+            <result name="input">/itemPage.jsp</result>
+        </action>
+        <action name="UpdateAccount" class="actions.UpdateAccountAction">
+            <result name="success">/manageAccount.jsp</result>
+            <result name="input">/manageAccount.jsp</result>
+        </action> 
+        <action name="RemoveFromCart" class="actions.RemoveFromCartAction">
+            <result name="success">/myCart.jsp</result>
+            <result name="input">/myCart.jsp</result>
+        </action>  
+        <action name="PaymentReceived" class="actions.PaymentReceivedAction">
+            <result name="success">/checkoutcomplete.jsp</result>
+            <result name="input">/checkout.jsp</result>
+        </action>        
+        <action name="Checkout" class="actions.CheckoutAction">
+            <result name="success">/checkout.jsp</result>
+            <result name="input">/myCart.jsp</result>
+        </action>     
+    </package>
+</struts>
